@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+$colors: (
+    primary: #001133,
+    accent: #FFF6BB,
+    box: #154273
+);
+
+body{
+    margin: 0;
+    font-family: 'Montserrat';
+    color: map-get($map: $colors, $key: accent);
+    background: map-get($map: $colors, $key: primary);
+}
+
+a{
+    color: map-get($map: $colors, $key: accent);
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-wrapper{
+    background: url('../images/Flat-Mountains.svg');
+    // background: url('../images/fullprofile.jpg');
+    background-size: cover;
+}
+.wrapper{
+    padding: 1.5em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    .logo{
+        font-weight: bold;
+    }
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+        li a{
+            padding: 0 .6em;
+        }
+    }
+}
+.main-content{
+    margin: 4em 0 2em;
+
+    .under-text {
+        margin-bottom: 0;
+    }
+}
+.blue-content-wrapper{
+    background: url('../images/Pattern-Randomized(3).svg');
+}
+
+.info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    justify-content: space-around;
+    margin-top: 2em;
+    li {
+        margin-bottom: 1.4em;
+    }
+    strong {
+        font-size: 1.3em;
+    }
+    span {
+        display: block;
+        text-transform: uppercase;
+        font-size: .65em;
+    }
+}
+
+.arrows{
+    display: none;
+}
+
+.extended-wrapper {
+    padding: 0 1.5em 2em;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+ul.carousal {
+    margin-bottom: 1em;
+
+    li {
+        background: map-get($map: $colors, $key: box);
+        padding: 1em;
+        margin-bottom: 1.5em;
+    }
+}
+
+blockquote {
+    margin: 0;
+    font-size: .85em;
+    line-height: 1.75em;
+    margin-bottom: 1em;
+}
+cite {
+    color: yellow;
+    font-weight: bold;
+    font-size: .8em;
+    font-style: normal;
+    position: relative;
+    padding-left: 25px;
+}
+cite::before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    height: 1px;
+    width: 20px;
+    border-bottom: 1px solid white;
+}
+
+h2 {
+    text-align: center;
+    position: relative;
+}
+
+h2::before {
+    content: " ";
+    position: absolute;
+    top: -0.5em;
+    height: 6px;
+    width: 30px;
+    border-bottom: solid yellow;
+}
+
+.social {
+    text-align: left;
+    display: flex;
+    justify-content: space-around;
+    opacity: .5;
+    padding-bottom: 3em;
+    ul {
+        
+        li {
+            margin: 2em 0;
+            
+        }
+    }
+    img {
+        width: 50px;
+    }
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+	padding: 0.5em;
+	color: map-get($map: $colors, $key: accent);
+    background-color: #008080;
+    font-size: 0.5em;
+	text-align: center;
+}
+
+@media (min-width: 650px) {
+    body {
+        font-size: 18px;
+    }
+    .wrapper {
+        padding: 1.5em 4em;
+    }
+
+    .carousal-container{
+        display: flex;
+    }
+
+    .arrows{
+        display: block;
+        width: 60px;
+        cursor: pointer;
+        margin: .5em;
+        color: yellow;
+    }
+
+    .left {
+        transform: rotateY(180deg);
+    }
+
+    ul.carousal {
+        display: flex;
+        margin-bottom: 0em;
+        li {
+            margin-right: 1em;
+            margin-bottom: 0em;
+            padding: 2em;
+
+            &:last-child {
+                margin-right: 0em;
+            }
+        }
+    }
+    h2 {
+        text-align: left;
+    }
+
+}
+
+@media (min-width: 850px) {
+    body {
+        font-size: 21px;
+    }
+
+    .info {
+        display: flex;
+        justify-content: space-between;
+        margin: 0em;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    .under-text {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    .v-padding {
+        padding: 4em;
+    }
+    .blue-content-wrapper {
+        padding-bottom: 4em;
+    }
+    .move-up {
+        margin-top: -7em;
+    }
+}
+
+@media (min-width: 1200) {
+}
