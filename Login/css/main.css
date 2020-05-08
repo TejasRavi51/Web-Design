@@ -55,6 +55,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: orangered;
+}
+
 .yellow-content-wrapper {
   text-align: center;
 }
