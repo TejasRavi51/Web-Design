@@ -8,7 +8,10 @@ body{
     font-size: 14px;
     margin: 0;
     font-family: 'Montserrat';
-    background: #FFF6BB;
+    color: black;
+    background-image: url('../images/Flat-Mountains.svg');
+    // background: #cfffe5;
+    background-size: cover;
 }
 
 .sidebar {
@@ -33,6 +36,33 @@ header{
         }
     }
 }
+footer.mobile-footer {
+    background-color: #222;
+    color: powderblue;
+    margin: 0em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+
+    p{
+        // font-size: 1.2em;
+        margin: 0.5em 0;
+    }
+    .social {
+        color: powderblue;
+        font-size: 2.5em;
+    }
+    .social:hover{
+        color: turquoise;
+    }
+}
+
+footer.sidebar-footer {
+    display: none;
+}
 
 img {
     display: none;
@@ -53,10 +83,28 @@ a:hover{
 a:active {
     transform: scale(0.95);
 }
-
-.yellow-content-wrapper {
+.title{
+    background: url('../images/thanos.jpg');
+    background-size:100% 100%;
+    color: white;
+    padding: 1.4em;
     text-align: center;
 }
+h1 {
+    opacity: 100%;
+    font-size: 2em;
+}
+
+.yellow-content-wrapper {
+    text-align: left;
+}
+
+
+
+.rights {
+    font-size: 0.7em;
+}
+
 
 @media (min-width: 756px) {
     body {
@@ -76,13 +124,16 @@ a:active {
         height: 100%;
         overflow: auto;
     }
+    footer.mobile-footer {
+        display: none;
+    }
     header {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        nav {
-            padding-top: 10em;
+        nav {padding-top: 10em;
+            padding-bottom: 5em;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -92,8 +143,39 @@ a:active {
             }
         }
     }
+    footer.sidebar-footer {
+        display: block;
+        background-color: #222;
+        color: powderblue;
+        bottom: 0;
+        position: fixed;
+        left: 0;
+        width: 200px;
+        text-align: center;
+        z-index: 999;
+        .social {
+            color: powderblue;
+            font-size: 2em;
+        }
+        .social:hover{
+            color: turquoise;
+        }
+    }
     .yellow-content-wrapper {
         margin-left: 200px;
         padding: 1em;
+    }
+    .title{
+        height: 500px;
+    }
+    h1{
+        padding-top: 3em;
+    }
+    .wrapper {
+        margin: 0 50px;
+        padding: 2em;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
     }
 }

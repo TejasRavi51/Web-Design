@@ -6,7 +6,7 @@
 
 body {
     color: #154273;
-    background-image: url('../images/Radiant-Gradient.svg');
+    background: #cfffe5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -232,7 +232,7 @@ input {
 
 footer {
     background-color: #222;
-    color: #fff;
+    color: #FFF6BB;
     font-size: 14px;
     bottom: 0;
     position: fixed;
@@ -244,13 +244,4 @@ footer {
 
 footer p {
     margin: 10px 0;
-}
-
-footer i {
-    color: red;
-}
-
-footer a {
-    color: #3c97bf;
-    text-decoration: none;
 }
