@@ -43,10 +43,15 @@ img {
 a {
     color: #FFF6BB;
     text-decoration: none;
+    transition: transform 80ms ease-in;
 }
 
 a:hover{
     color: orangered;
+}
+
+a:active {
+    transform: scale(0.95);
 }
 
 .yellow-content-wrapper {
