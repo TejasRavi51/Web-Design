@@ -115,16 +115,20 @@ h2{
 .rights {
     font-size: 0.7em;
 }
+.projects {
+    padding: 1em;
+    text-align: center;
+}
+.icons{
+    font-size: 6em;
+    color: teal;
+}
+
 
 @media (min-width: 600px){
     .title {
         height: 300px;
     }
-    .python{
-        font-size: 6em;
-        color: teal;
-    }
-    
 }
 
 @media (min-width: 1200px) {
