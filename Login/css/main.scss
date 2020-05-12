@@ -99,6 +99,32 @@ h1 {
     text-align: left;
 }
 
+.data-form {
+    margin: 0;
+    padding: 2em;
+}
+.stock-title {
+    padding: 1em;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+}
+p {
+    margin: 0;
+    padding-top: 0;
+}
+form {
+    background: teal;
+    max-width: 50em;
+    color: whitesmoke;
+    padding: 2em;
+    input {
+        border-radius: 5px;
+        font-size: 3em;
+    }
+}
 .wrapper {
     padding: 2em;
 }
@@ -131,7 +157,7 @@ h2{
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
     body {
         font-size: 18px;
     }

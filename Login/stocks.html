@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Tejas</title>
+    <link rel="stylesheet" href="fontawesome/css/fontawesome.css">
+    <link rel="stylesheet" href="fontawesome/css/brands.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="sidebar">
+        <header>
+            <a href="#" class="avatar">
+                    <img src="images/ProfileTejas.jpg" alt="">
+            </a>
+            <a href="#" class="logo">Tejas Ravi</a>
+            <nav class="pages">
+                <a href="#">Home</a>
+                <a href="about.html">About</a>
+                <a href="stocks.html">Stocks</a>
+                <a href="login.html">SignIn</a>
+            </nav>
+        </header>
+        <footer class="sidebar-footer">
+            <p>Follow the links</p>
+                <a href="#" class="social"><i class="fab fa-instagram-square"></i></a>
+                <a href="#" class="social"><i class="fab fa-twitter-square"></i></a>
+                <a href="#" class="social"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social"><i class="fab fa-github-square"></i></a>
+            <p class="rights">Copyright &copy 2020</p>
+        </footer>
+    </div>
+    <div class="mint-content-wrapper">
+        <div class="data-form">
+            <div class="stock-title">
+                <h3>Input your stock details to receive an email with current margins and holdings:</h3>
+                <p>(Only NSE listed stocks are permitted at the moment)</p>
+            </div>
+            <form id="my-form"><!-- <form action="/action_page.php"> -->
+                <div class="msg"></div>
+                <div>
+                <label for="symbol">Stock symbol:</label><br>
+                <input type="text" id="symbol"><br>
+                </div>
+                <div>
+                <label for="buy_value">Value of stock when bought:</label><br>
+                <input type="text" id="buy_value"><br>
+                </div>
+                <div>
+                <label for="volume">Volume of stocks bought:</label><br>
+                <input type="text" id="volume"><br><br>
+                </div>
+                <input class="btn" type="submit" value="Next Stock">
+            </form> 
+            <ul id="info"></ul>
+        </div>
+    </div>
+    <footer class= "mobile-footer">
+        <p>Follow the links</p>
+            <a href="#" class="social"><i class="fab fa-instagram-square"></i></a>
+            <a href="#" class="social"><i class="fab fa-twitter-square"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social"><i class="fab fa-github-square"></i></a>
+        <p class="rights">Copyright &copy 2020, Tejas Ravi</p>
+    </footer>
+    <script src="javascript/pushinfo.js"></script>
+</body>
+</html>
