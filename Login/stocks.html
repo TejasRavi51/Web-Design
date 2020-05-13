@@ -39,22 +39,30 @@
             </div>
             <form id="my-form"><!-- <form action="/action_page.php"> -->
                 <div class="msg"></div>
-                <div>
-                <label for="symbol">Stock symbol:</label><br>
-                <input type="text" id="symbol"><br>
-                </div>
-                <div>
-                <label for="buy_value">Value of stock when bought:</label><br>
-                <input type="text" id="buy_value"><br>
-                </div>
-                <div>
-                <label for="volume">Volume of stocks bought:</label><br>
+                <div class="stock-data">
+                    <label for="symbol">Stock symbol:</label><br>
+                    <input type="text" id="symbol"><br>
+                    
+                    <label for="buy_value">Value of stock when bought:</label><br>
+                    <input type="text" id="buy_value"><br>
+                    
+                    <label for="volume">Volume of stocks bought:</label><br>
                 <input type="text" id="volume"><br><br>
                 </div>
-                <input class="btn" type="submit" value="Next Stock">
+                <button class="ghost" id="nextStock">Next Stock</button>
+                <!-- <input class="btn" type="submit" value="Next Stock"> -->
+                <div class="mail">
+                <label for="mailID">Enter email:</label><br>
+                <input type="email" id="mailID" placeholder="Email" /><br><br>
+                </div>
+                <button id="sendMail">Send Mail</button>
             </form> 
             <ul id="info"></ul>
+            <div class="stock-title">
+                <p>Working Hours: 9:15A.M. To 3:30P.M.</p>
+            </div>
         </div>
+        
     </div>
     <footer class= "mobile-footer">
         <p>Follow the links</p>

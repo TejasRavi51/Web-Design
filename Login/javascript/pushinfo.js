@@ -1,44 +1,49 @@
-const stocks = [
-    {
-        symbol: 'SBIN',
-        buy_value: 176,
-        volume: 100
-    },
-    {
-        symbol: 'TATAMOTORS',
-        buy_value: 75,
-        volume: 200
-    },
-    {
-        symbol: 'PVR',
-        buy_value: 970,
-        volume: 20
-    }
-];
+// const stocks = [
+//     {
+//         symbol: 'SBIN',
+//         buy_price: 176,
+//         volume: 100
+//     },
+//     {
+//         symbol: 'TATAMOTORS',
+//         buy_price: 75,
+//         volume: 200
+//     },
+//     {
+//         symbol: 'PVR',
+//         buy_price: 970,
+//         volume: 20
+//     }
+// ];
 
-const stockJSON =JSON.stringify(stocks);
+const stocks = [];
 
-const myForm = document.querySelector('#my-form');
-const symbolInput = document.querySelector('#symbol');
-const valueInput = document.querySelector('#buy_value');
-const volumeInput = document.querySelector('#volume');
+const myForm = document.getElementById('my-form');
 
-myForm.addEventListener('submit', onSubmit);
+const symbolInput = document.getElementById('symbol');
+const valueInput = document.getElementById('buy_value');
+const volumeInput = document.getElementById('volume');
+const mailInput = document.getElementById('mailID');
 
-function onSubmit(e) {
-    e.preventDefault();
+const nextStockButton = document.getElementById('nextStock');
+const sendMailButton = document.getElementById('sendMail');
 
-    fetch('https://d54eb915.ngrok.io/stock-calls',{
+nextStockButton.addEventListener('click', () => {
+    alert('hello');
+});
+
+sendMailButton.addEventListener('click',() => {
+    stocks.push({symbol:symbolInput.value, buy_price: valueInput.value, volume: volumeInput.value});
+    console.log(stocks)
+    fetch('https://c4b1b0cf.ngrok.io/stock-calls',{
         method:'POST',
         headers: {
             'Accept': 'application/json, text/plain, */*',
             'Content-type':'application/json'
         },
-        body:stockJSON
+        body:JSON.stringify({stocks: stocks, email:[mailInput.value]})
     })
     // .then((res) => res.json())
     .then((data) => console.log(data))
-    // alert(420)
-}
-
-console.log(stockJSON)
+    alert("Mail submit")
+});
